@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Okello Daniel | Generative AI for Work &amp; Research Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Basic Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; }
+    header { background: #0c4a6e; color: #fff; padding: 2rem 1rem; text-align: center; }
+    header h1 { font-size: 2rem; margin-bottom: .5rem; }
+    header p { font-size: 1rem; opacity: 0.9; }
+    nav { background: #094d92; padding: .5rem; }
+    nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 2rem 1rem; max-width: 800px; margin: auto; }
+    section h2 { color: #094d92; margin-bottom: 1rem; }
+    #about-me article { margin-bottom: 1rem; }
+    #about-me .skills, #about-me .experience { margin-top: 1rem; }
+    .skills ul, .experience ul { list-style: disc inside; }
+    .course-info p { margin-bottom: 1rem; }
+    .submissions ul { list-style: none; padding-left: 0; }
+    .submissions li { background: #f0f4f8; margin: .5rem 0; padding: .75rem; border-radius: 4px; }
+    footer { background: #0c4a6e; color: #fff; text-align: center; padding: 1rem 0; margin-top: 2rem; font-size: .875rem; }
+    @media (min-width: 600px) { header h1 { font-size: 2.5rem; } }
+  </style>
+  <script>
+    // Smooth scroll for nav links
+    document.addEventListener('click', function (e) {
+      if (e.target.matches('nav a')) {
+        e.preventDefault();
+        const id = e.target.getAttribute('href').slice(1);
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Okello Daniel</h1>
+    <p>Demography &amp; Data Science Professional</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#about-course">About the Course</a></li>
+      <li><a href="#submissions">Weekly Submissions</a></li>
+    </ul>
+  </nav>
+
+  <section id="about-me">
+    <h2>About Me</h2>
+    <article>
+      <p>I am a self‑motivated data professional experienced in statistical analysis, data visualization, and survey methodology. Skilled in STATA, SPSS, CSPro, EPIDATA, and advanced Excel, I thrive on turning raw numbers into actionable insights while maintaining high standards of integrity and confidentiality.</p>
+      <p>Telephone: +256‑772‑520‑344 / +256‑753‑463‑449</p>
+    </article>
+    <div class="skills">
+      <h3>Core Skills</h3>
+      <ul>
+        <li>Data Entry, Cleaning &amp; Validation</li>
+        <li>Statistical Analysis &amp; Visualization</li>
+        <li>Survey Design &amp; Field Supervision</li>
+        <li>Technical Report Writing</li>
+      </ul>
+    </div>
+    <div class="experience">
+      <h3>Recent Experience</h3>
+      <ul>
+        <li><strong>Data Editor / Statistician</strong>, Uganda Bureau of Statistics – Migration &amp; Tourism Program (2019 – 2022)</li>
+        <li><strong>Data Editor</strong>, Annual Labour Force Survey – UBOS (2018 – 2019)</li>
+        <li><strong>Statistician</strong>, Education Survey – UBOS (2018)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about-course" class="course-info">
+    <h2>About the Course</h2>
+    <p><em>Generative AI for Work &amp; Research</em> explores hands‑on techniques for integrating large language models and other generative tools into professional and academic workflows. Participants learn prompt engineering, data‑aware generation, multimodal approaches, ethical considerations, and deployment strategies.</p>
+    <p>The eight‑week curriculum is project‑based, culminating in a capstone that showcases how generative AI can address real‑world challenges in data analysis, reporting, and communication.</p>
+  </section>
+
+  <section id="submissions" class="submissions">
+    <h2>My Weekly Submissions</h2>
+    <ul>
+      <li>Week 1 – <em>Prompt Engineering Fundamentals</em> – <a href="#" target="_blank">View submission</a></li>
+      <li>Week 2 – <em>Data‑Guided Text Generation</em> – <a href="#" target="_blank">View submission</a></li>
+      <li>Week 3 – <em>AI‑Assisted Visualization</em> – <span>Coming soon</span></li>
+      <li>Additional weeks will be added as the course progresses.</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Okello Daniel. All rights reserved.
+  </footer>
+</body>
+</html>
