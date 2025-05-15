@@ -2,30 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Okello Daniel | Generative AI for Work &amp; Research Portfolio</title>
+  <title>Okello Daniel | Generative AI Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* Basic Reset */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; }
-    header { background: #0c4a6e; color: #fff; padding: 2rem 1rem; text-align: center; }
-    header h1 { font-size: 2rem; margin-bottom: .25rem; }
-    header p { font-size: 1rem; opacity: 0.9; }
-    .profile { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 1rem auto 0; border: 4px solid #fff; display: block; }
-    nav { background: #094d92; padding: .5rem; }
-    nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 2rem 1rem; max-width: 800px; margin: auto; }
-    section h2 { color: #094d92; margin-bottom: 1rem; }
-    #about-me article { margin-bottom: 1rem; }
-    #about-me .skills, #about-me .experience { margin-top: 1rem; }
-    .skills ul, .experience ul { list-style: disc inside; }
-    .course-info p { margin-bottom: 1rem; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; background:#f2f6fa; }
+
+    /* Header */
+    header { background: #0c4a6e; color: #fff; padding: 2.5rem 1rem 3.5rem; text-align: center; position: relative; overflow:hidden; }
+    header::after{ content:""; position:absolute; inset:0; background:linear-gradient(135deg,#0c4a6e 0%, #126099 70%, #167ab6 100%); opacity:.35; z-index:0; }
+    header *{ position:relative; z-index:1; }
+    header h1 { font-size: 2.4rem; margin-bottom: 1rem; letter-spacing: .5px; }
+    .profile { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 4px solid #fff; display: block; }
+
+    /* Navigation */
+    nav { background: #094d92; padding: .6rem; box-shadow:0 2px 4px rgba(0,0,0,.08); }
+    nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; list-style: none; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; transition: opacity .2s ease; }
+    nav a:hover { opacity:.8; }
+
+    /* Sections */
+    section { padding: 2rem 1.25rem; max-width: 850px; margin: 2rem auto; border-radius: 10px; box-shadow:0 4px 8px rgba(0,0,0,.05); }
+    section h2 { margin-bottom: 1rem; font-size: 1.6rem; }
+
+    /* Color block backgrounds */
+    #about-me { background:#fff9e6; }
+    #about-course { background:#e6f7ff; }
+    #submissions { background:#f3f8ff; }
+
+    /* Boxed elements */
+    .boxed { border:2px solid #cdd4e0; background:#fff; padding:1rem 1.25rem; border-radius:6px; margin-bottom:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,.04); }
+    .boxed:last-child{ margin-bottom:0; }
+
+    /* Skills Grid */
+    .skill-grid { display:flex; flex-wrap:wrap; gap:1.25rem; justify-content:center; }
+    .skill-item { width:120px; text-align:center; }
+    .skill-icon { font-size:2.4rem; display:block; transition:transform .25s ease, filter .25s ease; }
+    .skill-label { margin-top:.5rem; font-size:.9rem; }
+    .skill-item:hover .skill-icon { transform:scale(1.15) rotate(-6deg); filter:drop-shadow(0 3px 6px rgba(0,0,0,.25)); }
+
+    /* Lists & sub-blocks */
+    #about-me h3{ margin-bottom:.6rem; }
+    .experience ul, .education ul { list-style: disc inside; }
+
+    /* Submissions */
     .submissions ul { list-style: none; padding-left: 0; }
-    .submissions li { background: #f0f4f8; margin: .5rem 0; padding: .75rem; border-radius: 4px; }
-    footer { background: #0c4a6e; color: #fff; text-align: center; padding: 1rem 0; margin-top: 2rem; font-size: .875rem; }
-    @media (min-width: 600px) { header h1 { font-size: 2.5rem; } }
+    .submissions li { background: #ffffff; margin: .6rem 0; padding: .85rem 1rem; border-radius: 6px; border-left:4px solid #167ab6; }
+
+    /* Footer */
+    footer { background: #0c4a6e; color: #fff; text-align: center; padding: 1rem 0; font-size: .875rem; }
+
+    /* Responsive typography */
+    @media (min-width: 600px) {
+      header h1 { font-size: 2.8rem; }
+    }
   </style>
   <script>
     // Smooth scroll for nav links
@@ -41,9 +72,9 @@
 <body>
   <header>
     <h1>Okello Daniel</h1>
-    <p>Demography &amp; Data Science Professional</p>
     <img src="https://github.com/christianwalk/graph-portfolio/raw/refs/heads/main/67541e9506700-bpfull.webp" alt="Okello Daniel profile photo" class="profile">
   </header>
+
   <nav>
     <ul>
       <li><a href="#about-me">About Me</a></li>
@@ -54,41 +85,69 @@
 
   <section id="about-me">
     <h2>About Me</h2>
-    <article>
-      <p>I am a self‑motivated data professional experienced in statistical analysis, data visualization, and survey methodology. Skilled in STATA, SPSS, CSPro, EPIDATA, and advanced Excel, I thrive on turning raw numbers into actionable insights while maintaining high standards of integrity and confidentiality.</p>
-      <p>Telephone: +256‑772‑520‑344 / +256‑753‑463‑449</p>
+
+    <article class="boxed">
+      <p>I am a self-motivated data professional experienced in statistical analysis, data visualization, and survey methodology. Skilled in STATA, SPSS, CSPro, EPIDATA, and advanced Excel, I thrive on turning raw numbers into actionable insights while maintaining high standards of integrity and confidentiality.</p>
+      
     </article>
-    <div class="skills">
+
+    <div class="skills boxed">
       <h3>Core Skills</h3>
-      <ul>
-        <li>Data Entry, Cleaning &amp; Validation</li>
-        <li>Statistical Analysis &amp; Visualization</li>
-        <li>Survey Design &amp; Field Supervision</li>
-        <li>Technical Report Writing</li>
-      </ul>
+      <div class="skill-grid">
+        <div class="skill-item">
+          <span class="skill-icon" role="img" aria-label="Data Entry">🗄️</span>
+          <span class="skill-label">Data Entry</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon" role="img" aria-label="Analysis & Visualization">📊</span>
+          <span class="skill-label">Analysis &amp; Viz</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon" role="img" aria-label="Survey Design">🗂️</span>
+          <span class="skill-label">Survey Design</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon" role="img" aria-label="Report Writing">📝</span>
+          <span class="skill-label">Report Writing</span>
+        </div>
+      </div>
     </div>
-    <div class="experience">
+
+    <div class="experience boxed">
       <h3>Recent Experience</h3>
       <ul>
-        <li><strong>Data Editor / Statistician</strong>, Uganda Bureau of Statistics – Migration &amp; Tourism Program (2019 – 2022)</li>
-        <li><strong>Data Editor</strong>, Annual Labour Force Survey – UBOS (2018 – 2019)</li>
+        <li><strong>Data Editor / Statistician</strong>, Uganda Bureau of Statistics – Migration &amp; Tourism Program (2019 – 2022)</li>
+        <li><strong>Data Editor</strong>, Annual Labour Force Survey – UBOS (2018 – 2019)</li>
         <li><strong>Statistician</strong>, Education Survey – UBOS (2018)</li>
+      </ul>
+    </div>
+
+    <div class="education boxed">
+      <h3>Professional Education &amp; Training</h3>
+      <ul>
+        <li>Postgraduate Diploma in Demography, 2021 – Makerere University</li>
+        <li>Bachelor of Demography &amp; Reproductive Health, 2016 – Kyambogo University</li>
+        <li>Introduction to Data Analysis with R (Public Health Applications), 2023 – Graph Network</li>
+        <li>Python Basics and Beyond Course, 2024 – Graph Network</li>
+        <li>Data Capture and Editing with CSPro (Online), Oct–Dec&nbsp;2023 – USAID&nbsp;DHS Program</li>
       </ul>
     </div>
   </section>
 
   <section id="about-course" class="course-info">
     <h2>About the Course</h2>
-    <p><em>Generative AI for Work &amp; Research</em> explores hands‑on techniques for integrating large language models and other generative tools into professional and academic workflows. Participants learn prompt engineering, data‑aware generation, multimodal approaches, ethical considerations, and deployment strategies.</p>
-    <p>The eight‑week curriculum is project‑based, culminating in a capstone that showcases how generative AI can address real‑world challenges in data analysis, reporting, and communication.</p>
+    <div class="boxed">
+      <p><em>Generative AI for Work &amp; Research</em> explores hands-on techniques for integrating large language models and other generative tools into professional and academic workflows. Participants learn prompt engineering, data-aware generation, multimodal approaches, ethical considerations, and deployment strategies.</p>
+      <p>The eight-week curriculum is project-based, culminating in a capstone that showcases how generative AI can address real-world challenges in data analysis, reporting, and communication.</p>
+    </div>
   </section>
 
   <section id="submissions" class="submissions">
     <h2>My Weekly Submissions</h2>
     <ul>
-      <li>Week 1 – <em>Prompt Engineering Fundamentals</em> – <a href="#" target="_blank">View submission</a></li>
-      <li>Week 2 – <em>Data‑Guided Text Generation</em> – <a href="#" target="_blank">View submission</a></li>
-      <li>Week 3 – <em>AI‑Assisted Visualization</em> – <span>Coming soon</span></li>
+      <li>Week 1 – <em>Prompt Engineering Fundamentals</em> – <a href="#" target="_blank">View submission</a></li>
+      <li>Week 2 – <em>Data-Guided Text Generation</em> – <a href="#" target="_blank">View submission</a></li>
+      <li>Week 3 – <em>AI-Assisted Visualization</em> – <span>Coming soon</span></li>
       <li>Additional weeks will be added as the course progresses.</li>
     </ul>
   </section>
