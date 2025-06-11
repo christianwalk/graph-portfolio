@@ -38,15 +38,8 @@
       object-fit: cover;
       border: 3px solid #fff;
     }
-    .header-center {
-      flex: 1;
-      text-align: center;
-    }
-    .course-title {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #fff;
-    }
+    .header-center { flex: 1; text-align: center; }
+    .course-title { font-size: 2rem; font-weight: bold; color: #fff; }
     .logo { width: 100px; height: auto; }
 
     /* Navigation */
@@ -84,6 +77,7 @@
     #about-me { background: #fff9e6; }
     #about-course { background: #e6f7ff; }
     #submissions { background: #f3f8ff; }
+    #contact-consultation { background: #fff; }
 
     /* Boxed elements */
     .boxed {
@@ -148,6 +142,7 @@
       .header-left { flex-direction: column; }
       .profile, .logo { width: 80px; height: 80px; }
       .course-title { font-size: 1.4rem; }
+      iframe { width: 100% !important; height: 480px !important; }
     }
   </style>
   <script>
@@ -164,13 +159,13 @@
 <body>
   <header>
     <div class="header-left">
-      <img src="https://github.com/christianwalk/graph-portfolio/raw/refs/heads/main/67541e9506700-bpfull.webp" class="profile">
+      <img src="https://github.com/christianwalk/graph-portfolio/raw/refs/heads/main/67541e9506700-bpfull.webp" class="profile" alt="Profile picture of Okello Daniel">
       <h1>Okello Daniel</h1>
     </div>
     <div class="header-center">
       <span class="course-title">Generative AI for Work &amp; Research Productivity</span>
     </div>
-    <img src="https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3.png" class="logo">
+    <img src="https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3.png" class="logo" alt="Graph Network logo">
   </header>
 
   <nav>
@@ -178,6 +173,7 @@
       <li><a href="#about-me">About Me</a></li>
       <li><a href="#about-course">About the Course</a></li>
       <li><a href="#submissions">Weekly Submissions</a></li>
+      <li><a href="#contact-consultation">Contact for Consultation</a></li>
     </ul>
   </nav>
 
@@ -193,19 +189,19 @@
       <h3>Core Skills</h3>
       <div class="skill-grid">
         <div class="skill-item">
-          <span class="skill-icon" role="img">🗄️</span>
+          <span class="skill-icon" role="img" aria-label="Database">🗄️</span>
           <span class="skill-label">Data Entry</span>
         </div>
         <div class="skill-item">
-          <span class="skill-icon" role="img">📊</span>
+          <span class="skill-icon" role="img" aria-label="Chart">📊</span>
           <span class="skill-label">Analysis &amp; Viz</span>
         </div>
         <div class="skill-item">
-          <span class="skill-icon" role="img">🗂️</span>
+          <span class="skill-icon" role="img" aria-label="Folders">🗂️</span>
           <span class="skill-label">Survey Design</span>
         </div>
         <div class="skill-item">
-          <span class="skill-icon" role="img">📝</span>
+          <span class="skill-icon" role="img" aria-label="Writing">📝</span>
           <span class="skill-label">Report Writing</span>
         </div>
       </div>
@@ -240,13 +236,10 @@
     <h2>About the Course</h2>
     <div class="boxed">
       <p>
-        <em>Generative AI for Work &amp; Research</em> explores hands-on techniques for integrating large language models
-        and other generative tools into professional and academic workflows. Participants learn prompt engineering, data-aware
-        generation, multimodal approaches, ethical considerations, and deployment strategies.
+        <em>Generative AI for Work &amp; Research</em> explores hands-on techniques for integrating large language models and other generative tools into professional and academic workflows. Participants learn prompt engineering, data-aware generation, multimodal approaches, ethical considerations, and deployment strategies.
       </p>
       <p>
-        The eight-week curriculum is project-based, culminating in a capstone that showcases how generative AI can address real-world
-        challenges in data analysis, reporting, and communication.
+        The eight-week curriculum is project-based, culminating in a capstone that showcases how generative AI can address real-world challenges in data analysis, reporting, and communication.
       </p>
     </div>
   </section>
@@ -262,10 +255,20 @@
     </ul>
   </section>
 
+  <!-- New Consultation Section -->
+  <section id="contact-consultation">
+    <h2>Contact for Consultation</h2>
+    <div class="boxed" style="overflow:auto;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvJcUEMnajDpFIkZR_3om_hhLY0Nm4vFU1d5C0y1JpLbN16Q/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </section>
+
   <footer>
     &copy; 2025 Okello Daniel. All rights reserved.
   </footer>
+
+  <!-- Optional: existing botpress chat integration -->
   <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/05/30/16/20250530162130-FMAIS96T.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/05/30/16/20250530162130-FMAIS96T.js"></script>
 </body>
 </html>
